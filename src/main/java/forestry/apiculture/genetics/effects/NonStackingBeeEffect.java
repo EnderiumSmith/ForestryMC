@@ -64,7 +64,7 @@ public abstract class NonStackingBeeEffect implements IBeeEffect {
 			return;
 		}
 
-		HashSet<BlockPos> owners = this.trackedOwners.get(level.dimension());
+		HashSet<BlockPos> owners = this.trackedOwners.computeIfAbsent(level.dimension(), key -> new HashSet<>());
 		HashSet<BlockPos> affectedHives = new HashSet<>();
 
 		for (Iterator<BlockPos> iterator = owners.iterator(); iterator.hasNext(); ) {
@@ -115,7 +115,7 @@ public abstract class NonStackingBeeEffect implements IBeeEffect {
 						int distY = Math.abs(pos.getY() - targetPos.getY());
 						int distZ = Math.abs(pos.getZ() - targetPos.getZ());
 
-						if (distX > territory.getX() || distY > territory.getY() || distZ > territory.getZ()) {
+						if (distX > territory.getX() || distY > territory.getY() || distZ > territory.getZ() || pos.equals(targetPos)) {
 							return;
 						}
 
