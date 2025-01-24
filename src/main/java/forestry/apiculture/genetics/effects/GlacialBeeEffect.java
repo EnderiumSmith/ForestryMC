@@ -10,6 +10,7 @@
  ******************************************************************************/
 package forestry.apiculture.genetics.effects;
 
+import forestry.apiculture.genetics.Bee;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
 import net.minecraft.world.level.Level;
@@ -36,14 +37,12 @@ public class GlacialBeeEffect extends ThrottledBeeEffect {
 			return storedData;
 		}
 
-		Vec3i area = genome.getActiveValue(BeeChromosomes.TERRITORY);
-		Vec3i offset = VecUtil.scale(area, -1 / 2.0f);
-		BlockPos housingCoords = housing.getCoordinates();
+		Vec3i area = Bee.getParticleArea(genome,housing);
+		BlockPos centerPos=housing.getCoordinates().offset(VecUtil.center(area));
 
 		for (int i = 0; i < 10; i++) {
 
-			BlockPos randomPos = VecUtil.getRandomPositionInArea(level.random, area);
-			BlockPos posBlock = VecUtil.sum(randomPos, housingCoords, offset);
+			BlockPos posBlock = VecUtil.getRandomPositionInArea(level.random, area).offset(centerPos);
 
 			// Freeze water
 			if (level.hasChunkAt(posBlock)) {

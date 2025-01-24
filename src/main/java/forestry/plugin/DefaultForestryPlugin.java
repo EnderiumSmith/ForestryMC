@@ -297,8 +297,8 @@ public class DefaultForestryPlugin implements IForestryPlugin {
 		apiculture.registerBeeEffect(ForestryBeeEffects.SIFTER, new SifterBeeEffect());
 		apiculture.registerBeeEffect(ForestryBeeEffects.HAKUNA_MATATA, new PotionBeeEffectExclusive(false, ApicultureEffects.HAKUNA_MATATA.get(), 20 * 60 * 3, 100, 1.0f, ApicultureEffects.MATATA.get()));
 		apiculture.registerBeeEffect(ForestryBeeEffects.GLOW_BERRY_GROW, new GlowBerryGrowEffect());
-		apiculture.registerBeeEffect(ForestryBeeEffects.REJUVENATION, new DummyBeeEffect(false));
-		apiculture.registerBeeEffect(ForestryBeeEffects.CHRONOPHAGE, new DummyBeeEffect(false));
+		apiculture.registerBeeEffect(ForestryBeeEffects.REJUVENATION, new AgingBeeEffect(false,false));
+		apiculture.registerBeeEffect(ForestryBeeEffects.CHRONOPHAGE, new AgingBeeEffect(false,true));
 		apiculture.registerBeeEffect(ForestryBeeEffects.SCULK, new SculkSpreadEffect());
 		apiculture.registerBeeEffect(ForestryBeeEffects.GUARDIAN, new EffectGuardian());
 		apiculture.registerBeeEffect(ForestryBeeEffects.PHASING, new PhasingBeeEffect());
