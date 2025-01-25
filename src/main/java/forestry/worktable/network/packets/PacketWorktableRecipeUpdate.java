@@ -14,7 +14,8 @@ import forestry.core.utils.NetworkUtil;
 import forestry.worktable.recipes.MemorizedRecipe;
 import forestry.worktable.tiles.WorktableTile;
 
-public record PacketWorktableRecipeUpdate(BlockPos pos, @Nullable MemorizedRecipe recipe) implements IForestryPacketClient {
+public record PacketWorktableRecipeUpdate(BlockPos pos,
+										  @Nullable MemorizedRecipe recipe) implements IForestryPacketClient {
 	public PacketWorktableRecipeUpdate(WorktableTile tile) {
 		this(tile.getBlockPos(), tile.getCurrentRecipe());
 	}

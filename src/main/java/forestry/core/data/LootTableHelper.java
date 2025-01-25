@@ -205,8 +205,8 @@ public class LootTableHelper {
 				).withPool(LootPool.lootPool()
 						.name("forestry_apiculture_bees")
 						.setRolls(ConstantValue.exactly(3))
-						.add(beeLoot(ForestryBeeSpecies.COMMON).setWeight(6))
-						.add(beeLoot(ForestryBeeSpecies.MEADOWS).setWeight(6))
+						.add(beeLoot(ForestryBeeSpecies.COMMON).setWeight(9))
+						.add(beeLoot(ForestryBeeSpecies.ENDED).setWeight(3))
 						.add(EmptyLootItem.emptyItem().setWeight(3))
 				)
 		);

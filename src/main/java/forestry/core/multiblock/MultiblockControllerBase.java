@@ -579,9 +579,9 @@ public abstract class MultiblockControllerBase implements IMultiblockControllerI
 		BlockPos maxCoord = getMaximumCoord();
 
 		return new BlockPos(
-			(minCoord.getX() + maxCoord.getX()) / 2,
-			(minCoord.getY() + maxCoord.getY()) / 2,
-			(minCoord.getZ() + maxCoord.getZ()) / 2
+				(minCoord.getX() + maxCoord.getX()) / 2,
+				(minCoord.getY() + maxCoord.getY()) / 2,
+				(minCoord.getZ() + maxCoord.getZ()) / 2
 		);
 	}
 
@@ -590,9 +590,9 @@ public abstract class MultiblockControllerBase implements IMultiblockControllerI
 		BlockPos maxCoord = getMaximumCoord();
 
 		return new BlockPos(
-			(minCoord.getX() + maxCoord.getX()) / 2,
-			maxCoord.getY(),
-			(minCoord.getZ() + maxCoord.getZ()) / 2
+				(minCoord.getX() + maxCoord.getX()) / 2,
+				maxCoord.getY(),
+				(minCoord.getZ() + maxCoord.getZ()) / 2
 		);
 	}
 

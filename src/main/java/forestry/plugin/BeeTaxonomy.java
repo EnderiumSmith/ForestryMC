@@ -17,7 +17,7 @@ public class BeeTaxonomy {
 					genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
 					genus.setDefaultChromosome(BeeChromosomes.CAVE_DWELLING, ForestryAlleles.TRUE);
 				});
-				family.defineSubTaxon(ForestryTaxa.GENUS_LUSH, genus ->{
+				family.defineSubTaxon(ForestryTaxa.GENUS_LUSH, genus -> {
 					genus.setDefaultChromosome(BeeChromosomes.FERTILITY, ForestryAlleles.FERTILITY_3);
 					genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_CAVE);
 					genus.setDefaultChromosome(BeeChromosomes.ACTIVITY, ForestryAlleles.ACTIVITY_CATHEMERAL);
@@ -105,7 +105,7 @@ public class BeeTaxonomy {
 					genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_PHOTOSYNTHESIS);
 					genus.setDefaultChromosome(BeeChromosomes.EFFECT, ForestryAlleles.EFFECT_IGNITION);
 				});
-				family.defineSubTaxon(ForestryTaxa.GENUS_RELIC, genus ->{
+				family.defineSubTaxon(ForestryTaxa.GENUS_RELIC, genus -> {
 					genus.setDefaultChromosome(BeeChromosomes.FLOWER_TYPE, ForestryAlleles.FLOWER_TYPE_ANCIENT);
 					genus.setDefaultChromosome(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_DOWN_1);
 				});

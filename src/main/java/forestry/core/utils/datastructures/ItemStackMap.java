@@ -11,6 +11,7 @@
 package forestry.core.utils.datastructures;
 
 import forestry.core.utils.ItemStackUtil;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

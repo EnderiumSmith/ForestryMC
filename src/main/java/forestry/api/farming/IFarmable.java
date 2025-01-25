@@ -39,7 +39,6 @@ public interface IFarmable {
 	 * Used by the farm to check if an item can be used to plant this farmable.
 	 *
 	 * @param stack A potential item to be input into the farm.
-	 *
 	 * @return {@code true} if the item is a valid seed/sapling/etc. for this farmable.
 	 */
 	boolean isGermling(ItemStack stack);

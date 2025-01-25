@@ -4,6 +4,8 @@ import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializationContext;
 
+import java.util.Map;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.ItemStack;
@@ -13,9 +15,13 @@ import net.minecraft.world.level.storage.loot.functions.LootItemFunctionType;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 
 import forestry.api.IForestryApi;
+import forestry.api.apiculture.ForestryBeeSpecies;
 import forestry.api.genetics.ILifeStage;
 import forestry.api.genetics.ISpecies;
 import forestry.api.genetics.ISpeciesType;
+import forestry.api.genetics.alleles.BeeChromosomes;
+import forestry.api.genetics.alleles.ForestryAlleles;
+import forestry.apiculture.BeeSpecies;
 
 /**
  * Loot function to add genetic information, an organism, to the item stack.
@@ -45,6 +51,9 @@ public class OrganismFunction extends LootItemConditionalFunction {
 
 		if (stage != null) {
 			ISpecies<?> species = speciesType.getSpecies(this.speciesId);
+			if (speciesId.equals(ForestryBeeSpecies.COMMON)) {
+				return species.createIndividual(Map.of(BeeChromosomes.TEMPERATURE_TOLERANCE, ForestryAlleles.TOLERANCE_BOTH_1, BeeChromosomes.HUMIDITY_TOLERANCE, ForestryAlleles.TOLERANCE_BOTH_1)).createStack(stage);
+			}
 			return species.createStack(stage);
 		}
 

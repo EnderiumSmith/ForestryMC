@@ -6,15 +6,18 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import forestry.api.ForestryConstants;
 
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+
 import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.common.loot.LootModifier;
 import net.minecraftforge.common.loot.LootTableIdCondition;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
@@ -34,7 +37,8 @@ public class ConditionLootModifier extends LootModifier {
 	private final ResourceLocation tableLocation;
 	private final List<String> extensions;
 
-	/** todo is this still necessary?
+	/**
+	 * todo is this still necessary?
 	 * Helper field to prevent an endless method loop caused by forge in {@link LootTable#getRandomItems(LootContext, Consumer)}
 	 * which calls this method again, since it keeps the {@link LootContext#getQueriedLootTableId()} value, which causes
 	 * "getRandomItems" to calling this method again, because the conditions still met even that it is an other loot

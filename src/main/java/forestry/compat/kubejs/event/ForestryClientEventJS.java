@@ -24,7 +24,7 @@ public class ForestryClientEventJS extends EventJS {
 		this.wrapped.setCustomBeeModel(speciesId, stage, model);
 	}
 
- 	public void setSaplingModel(ResourceLocation speciesId, ResourceLocation blockModel, ResourceLocation itemModel) {
+	public void setSaplingModel(ResourceLocation speciesId, ResourceLocation blockModel, ResourceLocation itemModel) {
 		this.wrapped.setSaplingModel(speciesId, blockModel, itemModel);
 	}
 

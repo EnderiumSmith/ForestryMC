@@ -77,8 +77,8 @@ public class CommandMail {
 
 	public static class CommandMailVirtualize {
 		public static ArgumentBuilder<CommandSourceStack, ?> register() {
-		    return Commands.literal("virtualize").requires(CommandHelpers.ADMIN).executes(CommandMailVirtualize::execute);
-        }
+			return Commands.literal("virtualize").requires(CommandHelpers.ADMIN).executes(CommandMailVirtualize::execute);
+		}
 
 		public static int execute(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
 			ServerPlayer player = context.getSource().getPlayerOrException();

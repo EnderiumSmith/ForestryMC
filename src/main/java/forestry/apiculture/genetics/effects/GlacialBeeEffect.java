@@ -11,6 +11,7 @@
 package forestry.apiculture.genetics.effects;
 
 import forestry.apiculture.genetics.Bee;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
 import net.minecraft.world.level.Level;
@@ -37,8 +38,8 @@ public class GlacialBeeEffect extends ThrottledBeeEffect {
 			return storedData;
 		}
 
-		Vec3i area = Bee.getParticleArea(genome,housing);
-		BlockPos centerPos=housing.getCoordinates().offset(VecUtil.center(area));
+		Vec3i area = Bee.getParticleArea(genome, housing);
+		BlockPos centerPos = housing.getCoordinates().offset(VecUtil.center(area));
 
 		for (int i = 0; i < 10; i++) {
 

@@ -42,6 +42,7 @@ public interface IHiveBuilder {
 
 	/**
 	 * Changes the generation chance of the hive.
+	 *
 	 * @since 1.1.1
 	 */
 	void setGenerationChance(float generationChance);

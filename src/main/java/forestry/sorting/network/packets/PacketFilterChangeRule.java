@@ -15,7 +15,8 @@ import forestry.api.modules.IForestryPacketServer;
 import forestry.core.network.PacketIdServer;
 import forestry.core.tiles.TileUtil;
 
-public record PacketFilterChangeRule(BlockPos pos, Direction facing, IFilterRuleType rule) implements IForestryPacketServer {
+public record PacketFilterChangeRule(BlockPos pos, Direction facing,
+									 IFilterRuleType rule) implements IForestryPacketServer {
 	@Override
 	public ResourceLocation id() {
 		return PacketIdServer.FILTER_CHANGE_RULE;

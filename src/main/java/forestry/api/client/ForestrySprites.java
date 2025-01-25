@@ -13,7 +13,7 @@ public class ForestrySprites {
 	 * Used for menu rendering with {@link com.mojang.blaze3d.systems.RenderSystem#setShaderTexture(int, ResourceLocation)}
 	 */
 	public static final ResourceLocation TEXTURE_ATLAS = ForestryConstants.forestry("textures/atlas/gui.png");
-	
+
 	public static final ResourceLocation HABITAT_DESERT = ForestryConstants.forestry("habitats/desert");
 	public static final ResourceLocation HABITAT_END = ForestryConstants.forestry("habitats/end");
 	public static final ResourceLocation HABITAT_FOREST = ForestryConstants.forestry("habitats/forest");

@@ -56,8 +56,8 @@ public final class VecUtil {
 		return BlockPos.containing(vec.getX() * factor, vec.getY() * factor, vec.getZ() * factor);
 	}
 
-	public static Vec3i center(Vec3i vec){
-		return new Vec3i(-vec.getZ()/2,-(vec.getY()-1)/2, -vec.getZ()/2);
+	public static Vec3i center(Vec3i vec) {
+		return new Vec3i(-vec.getZ() / 2, -(vec.getY() - 1) / 2, -vec.getZ() / 2);
 	}
 
 	public static Direction direction(Vec3i a, Vec3i b) {

@@ -16,7 +16,8 @@ import org.jetbrains.annotations.Nullable;
  * @param endTick   The end day tick of activity. Exclusive upper bound.
  * @param error     The error to show in the hive GUI when this bee is inactive.
  */
-public record SingleActivityType(int startTick, int endTick, IError error, LightPreference preference) implements IActivityType {
+public record SingleActivityType(int startTick, int endTick, IError error,
+								 LightPreference preference) implements IActivityType {
 	@Override
 	public boolean isDominant() {
 		return true;

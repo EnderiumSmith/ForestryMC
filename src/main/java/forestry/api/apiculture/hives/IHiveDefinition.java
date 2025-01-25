@@ -45,8 +45,8 @@ public interface IHiveDefinition {
 	 * Default is 1.0, higher numbers result in more hives, smaller will result in fewer.
 	 * Tree hives want around 3.0 to 4.0 since there are less locations to generate on.
 	 *
-	 * @deprecated Generation chance is now set by {@link IHive}. This value is a default, but can be overridden.
 	 * @since 1.1.1
+	 * @deprecated Generation chance is now set by {@link IHive}. This value is a default, but can be overridden.
 	 */
 	@Deprecated(forRemoval = true)
 	float getGenChance();

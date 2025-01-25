@@ -14,6 +14,7 @@ package forestry.storage;
 import java.util.function.Predicate;
 
 import com.google.common.base.Preconditions;
+
 import forestry.api.storage.EnumBackpackType;
 import forestry.api.storage.IBackpackDefinition;
 import forestry.api.storage.IBackpackInterface;

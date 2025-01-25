@@ -55,6 +55,7 @@ public interface IKaryotype {
 	/**
 	 * A weakly inherited chromosome is a chromosome whose default allele is always overridden by non-default alleles
 	 * during inheritance. For example, a bee's temperature tolerance
+	 *
 	 * @return Whether this chromosome is "weakly inherited" or "secondary."
 	 */
 	boolean isWeaklyInherited(IChromosome<?> chromosome);

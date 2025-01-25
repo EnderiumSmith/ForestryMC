@@ -43,6 +43,7 @@ public interface IHive {
 
 	/**
 	 * Determines the position of a hive.
+	 *
 	 * @param level The level to generate the hive in.
 	 * @param rand  The world generation random. Use this instead of the level random.
 	 * @param posX  The X coordinate of the position where the hive should be generated.

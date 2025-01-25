@@ -30,7 +30,8 @@ import forestry.core.network.IStreamable;
 import forestry.core.utils.ModUtil;
 
 public class StandardTank extends FluidTank implements IStreamable {
-	private ITankUpdateHandler tankUpdateHandler = tank -> {};
+	private ITankUpdateHandler tankUpdateHandler = tank -> {
+	};
 	private int tankIndex;
 	private final boolean canFill;
 	private final boolean canDrain;

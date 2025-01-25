@@ -23,8 +23,7 @@ public interface IRegistryChromosome<V extends IRegistryAlleleValue> extends IVa
 	/**
 	 * @return The value with the given ID from the registry this chromosome represents.
 	 * @throws IllegalStateException If the registry is not yet populated.
-	 * @throws RuntimeException If the registry does not contain an allele with the given ID.
-	 *
+	 * @throws RuntimeException      If the registry does not contain an allele with the given ID.
 	 */
 	V get(ResourceLocation id);
 

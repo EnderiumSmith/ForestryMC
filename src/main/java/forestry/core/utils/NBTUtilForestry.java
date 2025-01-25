@@ -11,7 +11,9 @@
 package forestry.core.utils;
 
 import forestry.core.network.IStreamable;
+
 import io.netty.buffer.Unpooled;
+
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.FriendlyByteBuf;
 

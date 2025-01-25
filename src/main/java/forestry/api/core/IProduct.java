@@ -31,6 +31,7 @@ public interface IProduct {
 	};
 
 	// todo should this be replaced with is(ItemStack) and getIconStack() methods instead?
+
 	/**
 	 * Gets the item this product contains. In the case of a dynamic product, return an item that might
 	 * be used to display it in a screen or for equality purposes in {@link #ITEM_ONLY_STRATEGY}.

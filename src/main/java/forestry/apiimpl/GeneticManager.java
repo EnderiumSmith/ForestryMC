@@ -56,7 +56,7 @@ public class GeneticManager implements IGeneticManager {
 		if (this.mutationsByType == null) {
 			throw new IllegalStateException("Mutations have not been registered yet");
 		}
-		IMutationManager<?> manager =  this.mutationsByType.get(speciesType);
+		IMutationManager<?> manager = this.mutationsByType.get(speciesType);
 		if (manager == null) {
 			throw new IllegalStateException("Invalid or unregistered species type");
 		}

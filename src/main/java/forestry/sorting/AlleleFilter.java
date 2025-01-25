@@ -13,7 +13,7 @@ public class AlleleFilter {
 
 	public boolean isValid(ISpecies<?> active, ISpecies<?> inactive) {
 		return (this.activeSpecies == null || active == this.activeSpecies)
-			&& (this.inactiveSpecies == null || inactive == this.inactiveSpecies);
+				&& (this.inactiveSpecies == null || inactive == this.inactiveSpecies);
 	}
 
 	public boolean isEmpty() {

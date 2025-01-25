@@ -1,4 +1,7 @@
 {
+  "remove": [
+    "minecraft:flowering_azalea_leaves"
+  ],
   "values": [
     "#minecraft:flowers",
     "minecraft:red_mushroom",

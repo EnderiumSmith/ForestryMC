@@ -95,7 +95,8 @@ public class ButterflyItemModel extends AbstractBakedModel {
 		}
 	}
 
-	public record Geometry(IdentityHashMap<IButterflySpecies, ResourceLocation> subModels) implements IUnbakedGeometry<Geometry> {
+	public record Geometry(
+			IdentityHashMap<IButterflySpecies, ResourceLocation> subModels) implements IUnbakedGeometry<Geometry> {
 		@Override
 		public BakedModel bake(IGeometryBakingContext context, ModelBaker baker, Function<Material, TextureAtlasSprite> spriteGetter, ModelState modelState, ItemOverrides overrides, ResourceLocation modelLocation) {
 			UnbakedModel modelButterfly = baker.getModel(ForestryConstants.forestry("item/butterfly"));

@@ -8,6 +8,7 @@ import java.util.function.Supplier;
 import forestry.apiculture.*;
 import forestry.apiculture.genetics.effects.*;
 import forestry.apiculture.PhotosynthesisFlowerType;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ItemStack;
@@ -297,12 +298,12 @@ public class DefaultForestryPlugin implements IForestryPlugin {
 		apiculture.registerBeeEffect(ForestryBeeEffects.SIFTER, new SifterBeeEffect());
 		apiculture.registerBeeEffect(ForestryBeeEffects.HAKUNA_MATATA, new PotionBeeEffectExclusive(false, ApicultureEffects.HAKUNA_MATATA.get(), 20 * 60 * 3, 100, 1.0f, ApicultureEffects.MATATA.get()));
 		apiculture.registerBeeEffect(ForestryBeeEffects.GLOW_BERRY_GROW, new GlowBerryGrowEffect());
-		apiculture.registerBeeEffect(ForestryBeeEffects.REJUVENATION, new AgingBeeEffect(false,false));
-		apiculture.registerBeeEffect(ForestryBeeEffects.CHRONOPHAGE, new AgingBeeEffect(false,true));
+		apiculture.registerBeeEffect(ForestryBeeEffects.REJUVENATION, new AgingBeeEffect(false, false));
+		apiculture.registerBeeEffect(ForestryBeeEffects.CHRONOPHAGE, new AgingBeeEffect(false, true));
 		apiculture.registerBeeEffect(ForestryBeeEffects.SCULK, new SculkSpreadEffect());
 		apiculture.registerBeeEffect(ForestryBeeEffects.GUARDIAN, new EffectGuardian());
 		apiculture.registerBeeEffect(ForestryBeeEffects.PHASING, new PhasingBeeEffect());
-		apiculture.registerBeeEffect(ForestryBeeEffects.ASCENSION, new PotionBeeEffect(true, MobEffects.LEVITATION, 200));
+		apiculture.registerBeeEffect(ForestryBeeEffects.ASCENSION, new AscensionBeeEffect());
 
 		apiculture.registerActivityType(ForestryActivityTypes.DIURNAL, new SingleActivityType(0, 12000, ForestryError.NOT_DAY, LightPreference.ANY));
 		apiculture.registerActivityType(ForestryActivityTypes.NOCTURNAL, new SingleActivityType(12000, 24000, ForestryError.NOT_NIGHT, LightPreference.DARK));

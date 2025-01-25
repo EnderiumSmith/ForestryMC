@@ -69,7 +69,6 @@ public class WorktableScreen extends GuiForestryTitled<WorktableMenu> {
 	}
 
 
-
 	@Override
 	protected void addLedgers() {
 		addErrorLedger(worktable);

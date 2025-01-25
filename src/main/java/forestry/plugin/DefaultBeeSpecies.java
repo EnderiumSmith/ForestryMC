@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.time.Month;
 
 import forestry.apiculture.CaveMutationCondition;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.item.ItemStack;
@@ -11,6 +12,7 @@ import net.minecraft.world.item.Items;
 
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Blocks;
+
 import net.minecraftforge.common.Tags;
 
 import forestry.api.ForestryTags;
@@ -208,7 +210,7 @@ public class DefaultBeeSpecies {
 				.setTemperature(TemperatureType.WARM)
 				.setHumidity(HumidityType.DAMP)
 				.addProduct(BEE_COMBS.stack(EnumHoneyComb.HONEY), 0.45F)
-				.addSpecialty(new ItemStack(Items.SMALL_DRIPLEAF),0.15F)
+				.addSpecialty(new ItemStack(Items.SMALL_DRIPLEAF), 0.15F)
 				.setGenome(genome -> {
 					genome.set(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_LONG);
 					genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOW);
@@ -242,7 +244,7 @@ public class DefaultBeeSpecies {
 				.setTemperature(TemperatureType.HELLISH)
 				.setHumidity(HumidityType.ARID)
 				.addProduct(BEE_COMBS.stack(EnumHoneyComb.SIMMERING), 0.45f)
-				.addProduct(CoreItems.CRAFTING_MATERIALS.stack(EnumCraftingMaterial.PHOSPHOR,2), 0.30F)
+				.addProduct(CoreItems.CRAFTING_MATERIALS.stack(EnumCraftingMaterial.PHOSPHOR, 2), 0.30F)
 				.setGenome(genome -> {
 					genome.set(BeeChromosomes.SPEED, ForestryAlleles.SPEED_SLOWER);
 					genome.set(BeeChromosomes.LIFESPAN, ForestryAlleles.LIFESPAN_NORMAL);

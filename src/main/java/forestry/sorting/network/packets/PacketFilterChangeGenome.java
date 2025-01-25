@@ -16,7 +16,8 @@ import forestry.core.tiles.TileUtil;
 import forestry.core.utils.NetworkUtil;
 import forestry.core.utils.SpeciesUtil;
 
-public record PacketFilterChangeGenome(BlockPos pos, Direction facing, short index, boolean active, @Nullable ISpecies<?> species) implements IForestryPacketServer {
+public record PacketFilterChangeGenome(BlockPos pos, Direction facing, short index, boolean active,
+									   @Nullable ISpecies<?> species) implements IForestryPacketServer {
 	public static void handle(PacketFilterChangeGenome msg, ServerPlayer player) {
 		TileUtil.getInterface(player.level(), msg.pos(), ForestryCapabilities.FILTER_LOGIC, null).ifPresent(logic -> {
 			if (logic.setGenomeFilter(msg.facing(), msg.index(), msg.active(), msg.species())) {

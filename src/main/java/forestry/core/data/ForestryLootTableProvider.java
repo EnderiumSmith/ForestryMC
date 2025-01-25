@@ -9,6 +9,6 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 
 public class ForestryLootTableProvider extends LootTableProvider {
 	public ForestryLootTableProvider(PackOutput pOutput) {
-		super(pOutput, Set.of(), List.of(new SubProviderEntry(ForestryBlockLootTables::new, LootContextParamSets.BLOCK)));
+		super(pOutput, Set.of(), List.of(new SubProviderEntry(ForestryBlockLootTables::new, LootContextParamSets.BLOCK),new SubProviderEntry(ForestryChestLootTables::new, LootContextParamSets.CHEST)));
 	}
 }

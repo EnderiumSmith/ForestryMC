@@ -25,7 +25,8 @@ import forestry.core.utils.NetworkUtil;
 import forestry.factory.tiles.TileCarpenter;
 import forestry.factory.tiles.TileFabricator;
 
-public record PacketRecipeTransferUpdate(BlockPos pos, NonNullList<ItemStack> craftingInventory) implements IForestryPacketClient {
+public record PacketRecipeTransferUpdate(BlockPos pos,
+										 NonNullList<ItemStack> craftingInventory) implements IForestryPacketClient {
 	@Override
 	public ResourceLocation id() {
 		return PacketIdClient.RECIPE_TRANSFER_UPDATE;

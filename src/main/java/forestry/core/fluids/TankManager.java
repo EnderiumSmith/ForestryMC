@@ -240,8 +240,9 @@ public class TankManager implements ITankManager, ITankUpdateHandler, IStreamabl
 		}
 
 		Level world = tile.getWorldObj();
-		if (world == null || world.isClientSide)
+		if (world == null || world.isClientSide) {
 			return;
+		}
 
 		int tankIndex = tank.getTankIndex();
 		PacketTankLevelUpdate tankLevelUpdate = new PacketTankLevelUpdate(tile, tankIndex, tank.getFluid());

@@ -13,7 +13,8 @@ import forestry.core.tiles.TileUtil;
 import forestry.sorting.AlleleFilter;
 import forestry.sorting.FilterLogic;
 
-public record PacketGuiFilterUpdate(BlockPos pos, IFilterRuleType[] filterRules, AlleleFilter[][] genomeFilter) implements IForestryPacketClient {
+public record PacketGuiFilterUpdate(BlockPos pos, IFilterRuleType[] filterRules,
+									AlleleFilter[][] genomeFilter) implements IForestryPacketClient {
 	@Override
 	public ResourceLocation id() {
 		return PacketIdClient.GUI_UPDATE_FILTER;

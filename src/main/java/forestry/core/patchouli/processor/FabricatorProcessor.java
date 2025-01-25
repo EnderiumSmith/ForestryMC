@@ -43,9 +43,9 @@ public class FabricatorProcessor implements IComponentProcessor {
 			return IVariable.wrap(this.recipe.getResultFluid().getAmount());
 		} else if (key.startsWith("ingredient")) {
 			int index = Integer.parseInt(key.substring("ingredient".length()));
-            if (index < 1 || index > 9) {
-                return IVariable.empty();
-            }
+			if (index < 1 || index > 9) {
+				return IVariable.empty();
+			}
 
 			Ingredient ingredient;
 			try {

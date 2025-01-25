@@ -2,6 +2,7 @@ package forestry.core.recipes.jei;
 
 import mezz.jei.api.gui.ingredient.IRecipeSlotTooltipCallback;
 import mezz.jei.api.gui.ingredient.IRecipeSlotView;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 

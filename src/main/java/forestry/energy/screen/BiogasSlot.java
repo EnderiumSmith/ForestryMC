@@ -12,6 +12,7 @@ package forestry.energy.screen;
 
 
 import net.minecraft.network.chat.Component;
+
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.IFluidTank;
 

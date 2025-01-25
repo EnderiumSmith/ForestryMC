@@ -21,6 +21,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 
 // todo does this actually improve performance?
+
 /**
  * A helper class that caches adjacent tiles for a given tile entity.
  * <p>

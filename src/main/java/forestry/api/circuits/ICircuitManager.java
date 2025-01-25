@@ -43,6 +43,7 @@ public interface ICircuitManager {
 
 	/**
 	 * Note: Currently hardcoded to Forestry circuit board.
+	 *
 	 * @return {@code true} if the given item is a circuit board and can have circuits installed in it.
 	 */
 	boolean isCircuitBoard(ItemStack stack);

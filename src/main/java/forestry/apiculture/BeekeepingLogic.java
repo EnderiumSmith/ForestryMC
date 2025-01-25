@@ -20,6 +20,7 @@ import java.util.Stack;
 
 import forestry.api.apiculture.*;
 import forestry.api.genetics.ForestryTaxa;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -360,7 +361,7 @@ public class BeekeepingLogic implements IBeekeepingLogic {
 		IBee princess = (IBee) IIndividualHandlerItem.getIndividual(princessStack);
 		IBee drone = (IBee) IIndividualHandlerItem.getIndividual(droneStack);
 		// If nether princess is outside nether it zombifies. Drones can breed in the short life they have so species may persist in secondary trait
-		if(princess.getSpecies().getGenusName().equals(ForestryTaxa.GENUS_EMBITTERED) && housing.getWorldObj().dimension()!=Level.NETHER){
+		if (princess.getSpecies().getGenusName().equals(ForestryTaxa.GENUS_EMBITTERED) && housing.getWorldObj().dimension() != Level.NETHER) {
 			princess = SpeciesUtil.getBeeSpecies(ForestryBeeSpecies.ZOMBIFIED).createIndividual();
 		}
 		princess.setMate(drone.getGenome());

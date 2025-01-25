@@ -10,6 +10,7 @@ import forestry.api.recipes.IMoistenerRecipe;
 import forestry.api.recipes.ISqueezerRecipe;
 import forestry.api.recipes.IStillRecipe;
 import forestry.factory.MachineUIDs;
+
 import mezz.jei.api.recipe.RecipeType;
 
 public class ForestryRecipeType {

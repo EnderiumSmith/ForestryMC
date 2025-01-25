@@ -24,7 +24,7 @@ public class ItemTooltipUtil {
 		String unlocalizedName = stack.getDescriptionId();
 		String tooltipKey = unlocalizedName + ".tooltip";
 		if (Translator.canTranslateToLocal(tooltipKey)) {
-            tooltip.add(Component.translatable(tooltipKey).withStyle(ChatFormatting.GRAY));
+			tooltip.add(Component.translatable(tooltipKey).withStyle(ChatFormatting.GRAY));
 			/*Minecraft minecraft = Minecraft.getInstance();
 			List<ITextProperties> tooltipInfoWrapped = minecraft.fontRenderer.split(tooltipInfo, 150);
 			tooltipInfoWrapped.forEach(s -> {

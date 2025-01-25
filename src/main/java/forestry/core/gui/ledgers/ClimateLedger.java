@@ -56,9 +56,9 @@ public class ClimateLedger extends Ledger {
 	@Override
 	public Component getTooltip() {
 		return Component.literal("T: ")
-			.append(ClimateHelper.toDisplay(climateProvider.temperature()))
-			.append(Component.literal(" / H: "))
-			.append(ClimateHelper.toDisplay(climateProvider.humidity()));
+				.append(ClimateHelper.toDisplay(climateProvider.temperature()))
+				.append(Component.literal(" / H: "))
+				.append(ClimateHelper.toDisplay(climateProvider.humidity()));
 	}
 
 }

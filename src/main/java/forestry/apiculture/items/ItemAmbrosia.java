@@ -24,12 +24,12 @@ public class ItemAmbrosia extends ItemForestryFood {
 
 	public ItemAmbrosia() {
 		super(new Item.Properties()
-			.food(new FoodProperties.Builder()
-					.alwaysEat()
-					.nutrition(Constants.FOOD_AMBROSIA_HEAL)
-					.saturationMod(0.6f)
-				.effect(new MobEffectInstance(MobEffects.REGENERATION, 40, 0), 1.0F)
-				.build()));
+				.food(new FoodProperties.Builder()
+						.alwaysEat()
+						.nutrition(Constants.FOOD_AMBROSIA_HEAL)
+						.saturationMod(0.6f)
+						.effect(new MobEffectInstance(MobEffects.REGENERATION, 40, 0), 1.0F)
+						.build()));
 	}
 
 	@Override

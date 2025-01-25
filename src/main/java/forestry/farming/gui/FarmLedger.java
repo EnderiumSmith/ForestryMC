@@ -82,6 +82,6 @@ public class FarmLedger extends Ledger {
 	public Component getTooltip() {
 		float hydrationModifier = delegate.getHydrationModifier();
 		return Component.literal(StringUtil.floatAsPercent(hydrationModifier) + ' ')
-			.append(Component.translatable("for.gui.hydration"));
+				.append(Component.translatable("for.gui.hydration"));
 	}
 }

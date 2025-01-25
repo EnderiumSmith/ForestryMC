@@ -48,15 +48,15 @@ public final class FluidHelper {
 	public static boolean canAcceptFluid(Level world, BlockPos pos, Direction facing, FluidStack fluid, boolean checkSpace) {
 		LazyOptional<IFluidHandler> capability = FluidUtil.getFluidHandler(world, pos, facing);
 		return capability.filter((handler) -> {
-			for (int tank = 0; tank < handler.getTanks(); tank++) {
-				int amountFilled = handler.fill(fluid, IFluidHandler.FluidAction.SIMULATE);
-				if (amountFilled > 0 && (!checkSpace || amountFilled >= fluid.getAmount())) {
-					return true;
-				}
-			}
-			return false;
-		})
-			.isPresent();
+					for (int tank = 0; tank < handler.getTanks(); tank++) {
+						int amountFilled = handler.fill(fluid, IFluidHandler.FluidAction.SIMULATE);
+						if (amountFilled > 0 && (!checkSpace || amountFilled >= fluid.getAmount())) {
+							return true;
+						}
+					}
+					return false;
+				})
+				.isPresent();
 	}
 
 	public static boolean canAcceptFluid(Level world, BlockPos pos, Direction facing, FluidStack fluid) {

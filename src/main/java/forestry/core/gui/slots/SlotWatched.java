@@ -44,7 +44,7 @@ public class SlotWatched extends SlotForestry {
 	public void onTake(Player player, ItemStack itemStack) {
 		super.onTake(player, itemStack);
 		//if (player instanceof ServerPlayer) {
-			//pickupWatcher.onTake(getSlotIndex(), player);
+		//pickupWatcher.onTake(getSlotIndex(), player);
 		//}
 	}
 

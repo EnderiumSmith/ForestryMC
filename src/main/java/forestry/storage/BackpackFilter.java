@@ -3,6 +3,7 @@ package forestry.storage;
 import javax.annotation.Nullable;
 
 import forestry.core.utils.TagUtil;
+
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -52,7 +53,7 @@ public class BackpackFilter implements Predicate<ItemStack> {
 		// but from what is allowed you can say what will be rejected (like an override)
 		// This allows broad wildcard "accept" types where you can still reject certain ones.
 		return TagUtil.getHolder(itemStack)
-			.map(itemHolder -> getAccept().contains(itemHolder) && !getReject().contains(itemHolder))
-			.orElse(false);
+				.map(itemHolder -> getAccept().contains(itemHolder) && !getReject().contains(itemHolder))
+				.orElse(false);
 	}
 }

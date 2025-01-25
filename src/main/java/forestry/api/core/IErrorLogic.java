@@ -53,6 +53,7 @@ public interface IErrorLogic extends IErrorSource {
 
 	/**
 	 * Sets this logic's errors using the specified errors array. Unknown errors are discarded.
+	 *
 	 * @param errorArray An array of numeric IDs that correspond to different errors.
 	 */
 	default void fromArray(short[] errorArray) {
