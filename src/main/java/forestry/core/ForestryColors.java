@@ -7,6 +7,6 @@ public class ForestryColors {
 	public static final int BLACK = 0x000000;
 
 	public static int color(int r, int g, int b) {
-		return ((r & 0xFF) << 16) | ((g & 0xFF) << 8) | (b & 0xFF);
+		return ((r & 0xFF) << 16) | ((g & 0xFF) << 8) | (b & 0xFF) | 0xFF <<24;
 	}
 }

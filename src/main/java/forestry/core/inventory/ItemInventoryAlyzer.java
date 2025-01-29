@@ -23,7 +23,6 @@ import forestry.api.core.IErrorSource;
 import forestry.api.genetics.IBreedingTracker;
 import forestry.api.genetics.IIndividual;
 import forestry.api.genetics.capability.IIndividualHandlerItem;
-import forestry.apiculture.features.ApicultureItems;
 import forestry.core.utils.GeneticsUtil;
 
 public class ItemInventoryAlyzer extends ItemInventory implements IErrorSource {

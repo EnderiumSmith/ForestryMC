@@ -16,13 +16,18 @@ import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ClickAction;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
+import forestry.api.genetics.IIndividual;
+import forestry.api.genetics.capability.IIndividualHandlerItem;
 import forestry.core.gui.ContainerAlyzer;
 import forestry.core.inventory.ItemInventoryAlyzer;
 
@@ -45,5 +50,31 @@ public class ItemAlyzer extends ItemWithGui {
 	@Override
 	public AbstractContainerMenu getContainer(int windowId, Player player, ItemStack heldItem) {
 		return new ContainerAlyzer(windowId, new ItemInventoryAlyzer(player, heldItem), player);
+	}
+
+	@Override
+	public boolean overrideStackedOnOther(ItemStack pStack, Slot pSlot, ClickAction pAction, Player pPlayer) {
+		ItemStack other=pSlot.getItem();
+		if(other.isEmpty()) return false;
+		IIndividual individual = IIndividualHandlerItem.getIndividual(other);
+		if(individual!=null && !individual.isAnalyzed()){
+			int charges = 0;
+			CompoundTag compound = pStack.getTag();
+			if (compound != null) {
+				charges = compound.getInt("Charges");
+			}
+			if(charges>0 && individual.analyze()){
+				individual.saveToStack(other);
+				compound.putInt("Charges",charges-1);
+				CompoundTag slotsNBT=compound.getCompound("Slots");
+				ItemStack item=ItemStack.of(slotsNBT.getCompound("0"));
+				item.shrink(1);
+				slotsNBT.put("0",item.save(new CompoundTag()));
+				compound.put("Slots",slotsNBT);
+				pPlayer.playSound(SoundEvents.EXPERIENCE_ORB_PICKUP);
+				return true;
+			}
+		}
+		return false;
 	}
 }
